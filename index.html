@@ -1,0 +1,53 @@
+<!--
+    File: index.html
+    Purpose: GUI Assignment Homework 4. Generating an dynamic multiplicative table basing on user inputs, using HTML, CSS, and JavaScript
+    Author: Jen Yuan Shih (JenYuan_Shih@student.uml.edu)
+    Last Updated: 11/21/2021 9:00PM EST
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Multiplicative Table Generator</title>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <h1>Dynamic Multiplicative Table Generator</h1>
+    </div>
+    <!-- HTML Forms, accept user inputs that which will be send to JavaScript for table generation upon submission. -->
+    <!-- Currently accept 4 inputs (Column Min, Column Max, Row Min, Row Max)-->
+    <div id="formWrapper" class="formTableWrapper">
+        <form id="tableForm">
+            <div class = "form-box">
+                <label for="row_min">Min Column Value:</label>
+                <input type = "text" id="col_min" name ="col_min">
+            </div>
+            <div class = "form-box">
+                <label for="col_max">Max Column Value:</label>
+                <input type = "text" name ="col_max" id="col_max">
+            </div>
+            <div class = "form-box">
+                <label for="row_min">Min Row Value:</label>
+                <input type = "text" name ="row_min" id="row_min">
+            </div>
+            <div class = "form-box">
+                <label for="row_max">Max Row Value:</label>
+                <input type = "text" name ="row_max" id="row_max">
+            </div>
+            <button type="submit" id="submit_button">Generate Table</button>
+        </form>
+        <div id="msg">
+        </div>
+    </div>
+    
+    <!-- An currently empty div that will be holding the dynamically generated table from JavaScript-->
+    <div id="tableWrapper" class="formTableWrapper">
+    </div>
+    <!-- An currently empty div that will be holding the dynamically generated table from JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="js/table.js"></script>
+</body>
+</html>
